@@ -27,20 +27,21 @@ if (/(android)/i.test(navigator.userAgent)) { // for android & amazon-fireos
 
         showBannerTop: function () {
             if (!this.checkSimulator()) {
-	            this.showBanner(AdMob.AD_POSITION.TOP_CENTER);
+	            this.showBanner(AdMob.AD_POSITION.TOP_CENTER, AdMob.AD_SIZE.MEDIUM_RECTANGLE);
             }
         },
 
         showBannerBottom: function () {
             if (!this.checkSimulator()) {
-	            this.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+	            this.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER, AdMob.AD_SIZE.SMART_BANNER);
             }
         },
 
-        showBanner: function (position) {
+        showBanner: function (position, size) {
             AdMob.createBanner(
                 {
                   adId: admobid.banner,
+                  adSize: size,
                   position: position,
                   autoShow: true,
                   overlap: false,
