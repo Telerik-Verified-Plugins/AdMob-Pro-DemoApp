@@ -43,6 +43,7 @@
     "ID_RESOLUTION_HD720P"
   ],
   "CorePlugins": [
+    "cordova-plugin-admobpro@2.9.9",
     "cordova-plugin-console",
     "cordova-plugin-device",
     "cordova-plugin-dialogs",
